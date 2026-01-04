@@ -17,15 +17,31 @@ class MoneyTrackerApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Money Tracker'),
-      ),
-      body: Center(
-        child: Text('Hello Money Tracker!'),
+      // backgroundColor: Color(0xFFaf8af8),
+      // appBar: AppBar(
+      //   title: Text('Money Fucker'),
+      // ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFFaf8af8),
+              Colors.white,
+            ],
+          ),
+        ),
+        // child: Text('Hello Money Tracker!'),
       ),
     );
   }
