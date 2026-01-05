@@ -47,15 +47,26 @@ class _HomeScreenState extends State<HomeScreen> {
         // child: Text('Hello Money Tracker!'),
         child: Column(
           children: [
-            SizedBox(height: 70),  // Space from top
+            SizedBox(height: 100),  // Space from top
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () => print('settings'),
+                  child: Icon(Icons.settings, size: 20, color: Colors.black),
+                ),
+                SizedBox(width: 8),
                 Icon(Icons.calendar_today, size: 20, color: Colors.black),
                 SizedBox(width: 8),
                 Text(
                   'January 4, 2026',
                   style: TextStyle(fontSize: 18, color: const Color.fromARGB(255, 0, 0, 0)),
+                ),
+                SizedBox(width: 8),
+                ElevatedButton(
+                  onPressed: () => print('notification'),
+                  child: Icon(Icons.notifications, size: 20, color: Colors.black),
                 ),
               ],
             ),
