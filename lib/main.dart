@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MoneyTrackerApp());
@@ -75,6 +76,69 @@ class _HomeScreenState extends State<HomeScreen> {
                     minimumSize: Size(40, 40),   // Minimum button size
                   ),
                   child: Icon(Icons.notifications, size: 20, color: Colors.black),
+                ),
+              ],
+            ),
+            SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('This Month Spend',
+                style: GoogleFonts.pacifico(
+                  fontSize: 14,
+                  color: const Color.fromARGB(255, 39, 38, 38),
+                ),
+                ),
+              ],
+            ),
+            // SizedBox(height: 1),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '\$1000',
+                  style: GoogleFonts.pacifico(
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 39, 38, 38),
+                  ),
+                ),
+              ],
+            ),
+            // SizedBox(height: 1),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '67% below last month',
+                  style: GoogleFonts.pacifico(
+                    fontSize: 14,
+                    color: const Color.fromARGB(255, 39, 38, 38),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () => print('wallet'),
+                  style: ElevatedButton.styleFrom(
+                    // padding: EdgeInsets.all(8),  // Control button padding here
+                    minimumSize: Size(380, 60),   // Minimum button size
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      // SizedBox(width: 20),
+                      Padding(padding: EdgeInsets.only(left: 0)),
+                      Icon(Icons.wallet, size: 20, color: Colors.black),
+                    ],
+                  ),
                 ),
               ],
             ),
